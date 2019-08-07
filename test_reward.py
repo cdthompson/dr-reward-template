@@ -43,9 +43,9 @@ class TestReward(unittest.TestCase):
         Verify the distance factor falls off as we get further from the center
         '''
         self.assertEqual(reward.calculate_distance_from_center_factor(10.0, 0.0), 1.0)
-        self.assertEqual(reward.calculate_distance_from_center_factor(10.0, 1.0), 0.5)
-        self.assertEqual(reward.calculate_distance_from_center_factor(10.0, 2.0), 0.1)
-        self.assertEqual(reward.calculate_distance_from_center_factor(10.0, 3.0), 1e-3)
+        self.assertEqual(reward.calculate_distance_from_center_factor(10.0, 2.0), 0.5)
+        self.assertEqual(reward.calculate_distance_from_center_factor(10.0, 3.5), 0.1)
+        self.assertEqual(reward.calculate_distance_from_center_factor(10.0, 5.5), 1e-3)
 
 if __name__ == '__main__':
     unittest.main()

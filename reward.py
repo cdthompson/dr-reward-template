@@ -33,9 +33,9 @@ def calculate_distance_from_center_factor(track_width, distance_from_center):
     '''
 
     # Calculate 3 markers that are at varying distances away from the center line
-    marker_1 = 0.1 * track_width/2.0
-    marker_2 = 0.25 * track_width/2.0
-    marker_3 = 0.5 * track_width/2.0
+    marker_1 = 0.1 * track_width
+    marker_2 = 0.25 * track_width
+    marker_3 = 0.5 * track_width
 
     # Give higher reward if the car is closer to center line and vice versa
     if distance_from_center <= marker_1:
