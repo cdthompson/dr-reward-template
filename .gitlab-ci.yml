@@ -1,0 +1,19 @@
+image: "python:3.7"
+
+before_script:
+  - python --version
+  - pip install -r requirements.txt
+
+stages:
+  - lint
+  - test
+
+lint:
+  stage: lint
+  script:
+  - pylint -v --exit-zero reward.py test_reward.py
+
+test:
+  stage: test
+  script:
+  - python test_reward.py
